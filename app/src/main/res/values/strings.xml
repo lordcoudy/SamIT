@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SamIT</string>
+    <string name="AddG">Google</string>
+    <string name="AddA">Apple</string>
+    <string name="AddO">Oreo</string>
+    <string name="clr">Clear</string>
+    <string name="play">Play</string>
+    <string name="wlcm">Welcome!</string>
+</resources>
