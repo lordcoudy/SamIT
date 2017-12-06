@@ -6,7 +6,10 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
+import android.view.Surface;
 import android.view.View;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 
 public class MyDraw extends View implements View.OnClickListener{
@@ -58,20 +61,24 @@ public class MyDraw extends View implements View.OnClickListener{
     @Override
 
     protected void onDraw(final Canvas canvas) {
+        try {
 
+            for (Object thing : objects) {
+                if (thing instanceof Drawable)
+                    ((Drawable) thing).draw(canvas);
+            }
 
-        for (Object thing : objects) {
-            if (thing instanceof Drawable)
-                ((Drawable) thing).draw(canvas);
+            for (Object thing : objects) { // For move using abstract class
+                if (thing instanceof move)
+                    ((move) thing).move();
+            }
+
+            // Request for ReDraw screen
+            invalidate();
         }
-
-        for (Object thing : objects) { // For move using abstract class
-            if (thing instanceof move)
-                ((move) thing).move();
+        catch (OutOfMemoryError z){
+            System.err.println("Oops! Something wrong!");
         }
-
-        // Request for ReDraw screen
-        invalidate();
     }
 
 
@@ -79,11 +86,17 @@ public class MyDraw extends View implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.Random) {
-            random();
-        } else if (v.getId() == R.id.clear) {
-            clear();
+        try {
+            if (v.getId() == R.id.Random) {
+                random();
+            } else if (v.getId() == R.id.clear) {
+                clear();
+            }
         }
+        catch (OutOfMemoryError z){
+            System.err.println("Oops! Something wrong!");
+        }
+
     }
 
 
