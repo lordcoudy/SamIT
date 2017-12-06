@@ -1,37 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context="com.programm.lordcoudy.samit.Hello">
-
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="com.lordcoudy.projectforsamsung.Greeting">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="241dp"
-        android:layout_height="345dp"
+        android:layout_width="wrap_content"
+        android:layout_height="305dp"
         android:layout_gravity="center"
-        app:srcCompat="@mipmap/google"
+        android:contentDescription="@string/icom"
+        app:srcCompat="@drawable/google"
         tools:layout_editor_absoluteX="71dp"
         tools:layout_editor_absoluteY="0dp" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="299sp"
+        android:layout_width="299dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
         android:text="@string/wlcm"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="45dp"
+        android:textSize="45sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="56dp"
         tools:layout_editor_absoluteY="352dp" />
-
-
 
 
     <LinearLayout
@@ -39,20 +37,24 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/play"
+            android:id="@+id/GotoMain"
             android:layout_width="match_parent"
-            android:layout_height="93sp"
+            android:layout_height="match_parent"
             android:layout_gravity="bottom"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="20dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
             android:background="@color/colorPrimaryDark"
+            android:gravity="center"
             android:onClick="onClick"
             android:text="@string/play"
             android:textColor="#fff"
-            android:textSize="34dp"
+            android:textSize="34sp"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="566dp" />
 
     </LinearLayout>
+
+
 </LinearLayout>

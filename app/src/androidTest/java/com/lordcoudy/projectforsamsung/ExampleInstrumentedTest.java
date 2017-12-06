@@ -1,4 +1,4 @@
-package com.programm.lordcoudy.samit;
+package com.lordcoudy.projectforsamsung;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.programm.lordcoudy.samit", appContext.getPackageName());
+        assertEquals("com.lordcoudy.projectforsamsung", appContext.getPackageName());
     }
 }

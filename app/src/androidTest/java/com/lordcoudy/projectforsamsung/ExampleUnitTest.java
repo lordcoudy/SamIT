@@ -1,4 +1,4 @@
-package com.programm.lordcoudy.samit;
+package com.lordcoudy.projectforsamsung;
 
 import org.junit.Test;
 

@@ -1,9 +1,8 @@
 <resources>
-    <string name="app_name">SamIT</string>
-    <string name="AddG">Google</string>
-    <string name="AddA">Apple</string>
-    <string name="AddO">Oreo</string>
-    <string name="clr">Clear</string>
-    <string name="play">Play</string>
-    <string name="wlcm">Welcome!</string>
+    <string name="app_name">ProjectForSamsung</string>
+    <string name="wlcm">Greetengs, stranger!</string>
+    <string name="play">Let\'s play!</string>
+    <string name="random">Add a random object</string>
+    <string name="clr">clear all</string>
+    <string name="icom">icon</string>
 </resources>
