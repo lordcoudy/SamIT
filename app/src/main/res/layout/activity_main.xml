@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.programm.lordcoudy.samit.MainActivity">
+    tools:context="com.programm.lordcoudy.samit.Hello">
 
     <com.programm.lordcoudy.samit.MyDraw
         android:id="@+id/myDraw1"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:layout_height="wrap_content"
         android:layout_above="@id/gugl"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
