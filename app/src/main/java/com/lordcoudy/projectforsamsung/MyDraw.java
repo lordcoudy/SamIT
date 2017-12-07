@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MyDraw extends View implements View.OnClickListener{
+public class MyDraw extends View implements View.OnClickListener {
 
 
     ArrayList objects = new ArrayList();
@@ -43,19 +43,17 @@ public class MyDraw extends View implements View.OnClickListener{
     OreoFly oreo1, oreo2, oreoN;
     Circle circle1, circle2, circleN;
     AppleFly apple1, apple2, appleN;
-    GoogleFly google1 ,google2, googleN;
+    GoogleFly google1, google2, googleN;
 
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        for(Object thing : objects){
-            if( thing instanceof Touchable)
-                ((Touchable)thing).onTouch(event);
+        for (Object thing : objects) {
+            if (thing instanceof Touchable)
+                ((Touchable) thing).onTouch(event);
         }
         return super.onTouchEvent(event);
     }
-
-
 
 
     @Override
@@ -75,13 +73,10 @@ public class MyDraw extends View implements View.OnClickListener{
 
             // Request for ReDraw screen
             invalidate();
-        }
-        catch (OutOfMemoryError z){
+        } catch (OutOfMemoryError z) {
             System.err.println("Oops! Something wrong!");
         }
     }
-
-
 
 
     @Override
@@ -91,33 +86,56 @@ public class MyDraw extends View implements View.OnClickListener{
                 random();
             } else if (v.getId() == R.id.clear) {
                 clear();
+            } else if (v.getId() == R.id.Google) {
+                google();
+            } else if (v.getId() == R.id.Apple) {
+                apple();
+            } else if (v.getId() == R.id.Oreo) {
+                oreo();
             }
-        }
-        catch (OutOfMemoryError z){
+        } catch (OutOfMemoryError z) {
             System.err.println("Oops! Something wrong!");
         }
 
     }
 
 
-
-    private void random(){      // using private type
-        int object = (int)(Math.random()* 4);
-        switch (object){
-            case 0: this.circleN = new Circle();
-            objects.add(circleN);
-            break;
-            case 1: this.oreoN = new OreoFly(BitmapFactory.decodeResource(getResources(), R.drawable.oreo));
-            objects.add(oreoN);
-            break;
-            case 2: this.appleN = new AppleFly(BitmapFactory.decodeResource(getResources(), R.drawable.apple));
-            objects.add(appleN);
-            break;
-            case 3:  this.googleN = new GoogleFly(BitmapFactory.decodeResource(getResources(), R.drawable.google));
-            objects.add(googleN);
-            break;
+    private void random() {      // using private type
+        int object = (int) (Math.random() * 4);
+        switch (object) {
+            case 0:
+                this.circleN = new Circle();
+                objects.add(circleN);
+                break;
+            case 1:
+                this.oreoN = new OreoFly(BitmapFactory.decodeResource(getResources(), R.drawable.oreo));
+                objects.add(oreoN);
+                break;
+            case 2:
+                this.appleN = new AppleFly(BitmapFactory.decodeResource(getResources(), R.drawable.apple));
+                objects.add(appleN);
+                break;
+            case 3:
+                this.googleN = new GoogleFly(BitmapFactory.decodeResource(getResources(), R.drawable.google));
+                objects.add(googleN);
+                break;
         }
     }
+
+    private void google() {
+        this.googleN = new GoogleFly(BitmapFactory.decodeResource(getResources(), R.drawable.google));
+        objects.add(googleN);
+    }
+
+    private void apple() {
+        this.appleN = new AppleFly(BitmapFactory.decodeResource(getResources(), R.drawable.apple));
+        objects.add(appleN);
+    }
+
+    private void oreo(){
+        this.oreoN = new OreoFly(BitmapFactory.decodeResource(getResources(), R.drawable.oreo));
+        objects.add(oreoN);
+}
 
     private void clear(){ // using private type
         objects.clear();

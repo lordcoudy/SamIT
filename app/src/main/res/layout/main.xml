@@ -10,8 +10,8 @@
         android:id="@+id/myDraw1"
         android:layout_width="match_parent"
         android:layout_height="550dp"
+        android:layout_above="@+id/Google"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:background="#fff"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -29,11 +29,40 @@
         android:id="@+id/clear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/Random"
-        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/Google"
+        android:layout_alignParentStart="true"
         android:backgroundTint="@color/colorPrimaryDark"
         android:text="@string/clr"
         android:textColor="@android:color/white" />
 
+    <Button
+        android:id="@+id/Google"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Apple"
+        android:layout_alignParentStart="true"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:text="@string/gugl"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/Apple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Oreo"
+        android:layout_alignParentStart="true"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:text="@string/appl"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/Oreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Random"
+        android:layout_alignParentStart="true"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:text="@string/oreo"
+        android:textColor="@android:color/white" />
 
 </RelativeLayout>

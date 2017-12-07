@@ -5,4 +5,7 @@
     <string name="random">Add a random object</string>
     <string name="clr">clear all</string>
     <string name="icom">icon</string>
+    <string name="gugl">Add Google</string>
+    <string name="oreo">Add Oreo</string>
+    <string name="appl">Add Apple</string>
 </resources>
